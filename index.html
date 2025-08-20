@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الساعة الطبية – فكرة تجريبية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/OBJLoader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { background: linear-gradient(135deg, #1a1a2e, #3a0ca3); color: #fff; font-family: 'Tajawal', sans-serif; }
+    h2 { font-size: 2rem; margin-bottom: 1rem; font-weight: bold; }
+    .glass { background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(12px); border-radius: 1rem; }
+  </style>
+</head>
+<body class="overflow-x-hidden">
+
+  <!-- شريط علوي -->
+  <header class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-40 backdrop-blur-md py-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center px-6">
+      <h1 class="text-xl font-bold">⌚ الساعة الطبية</h1>
+      <span class="text-sm opacity-80">الفكرة تجريبية</span>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="flex flex-col items-center justify-center text-center min-h-screen px-4 pt-20">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6" data-aos="fade-down">ابتكار يدمج الصحة والعبادة</h2>
+    <p class="max-w-2xl text-lg opacity-90 mb-8" data-aos="fade-up">ساعة/سوار ذكي مقاوم للماء مع فتحات للوضوء، أجهزة طبية مدمجة، موقع شخصي صحي، تنبيهات أدوية، وخدمة طوارئ.</p>
+    <a href="#idea" class="px-6 py-3 bg-purple-600 hover:bg-purple-800 transition rounded-full shadow-lg">اكتشف المزيد</a>
+    <div id="watch3d" class="w-full h-[400px] md:h-[500px] mt-10"></div>
+  </section>
+
+  <!-- الفكرة -->
+  <section id="idea" class="max-w-5xl mx-auto text-center mt-20 px-4" data-aos="fade-up">
+    <h2>💡 الفكرة</h2>
+    <p class="text-lg leading-relaxed">
+      سوار/ساعة ذكية مقاومة للماء مع فتحات للوضوء، تجمع بين المتابعة الصحية والدينية. تحتوي على أجهزة طبية مدمجة مثل قياس نبض القلب، ضغط الدم، وسكر الدم، بالإضافة إلى موقع طبي شخصي يحوي كل المعلومات الصحية المهمة. السوار يذكّر المستخدم بمواعيد الأدوية، ويوفر خدمة الطوارئ عند الحاجة، ويمكن الوصول للموقع بسهولة عبر NFC أو باركود على السوار.
+    </p>
+  </section>
+
+  <!-- المشاكل -->
+  <section class="glass max-w-5xl mx-auto mt-16 p-8" data-aos="fade-up">
+    <h2>🚀 ماذا تحل فكرتنا؟</h2>
+    <ul class="text-lg leading-relaxed space-y-3">
+      <li>✔️ ساعة/سوار مقاوم للماء مع فتحات تسمح بالوضوء دون إزالة السوار.</li>
+      <li>✔️ تذكير تلقائي بالأدوية ومواعيدها.</li>
+      <li>✔️ موقع طبي شخصي مدمج بجميع المعلومات الصحية.</li>
+      <li>✔️ خدمة الطوارئ مباشرة من السوار.</li>
+    </ul>
+  </section>
+
+  <!-- الفوائد -->
+  <section class="max-w-5xl mx-auto text-center mt-16 px-4" data-aos="fade-up">
+    <h2>🌟 الفوائد</h2>
+    <div class="grid md:grid-cols-2 gap-6 text-lg">
+      <div class="glass p-6">1. متابعة صحية سهلة.</div>
+      <div class="glass p-6">2. معلومات طبية جاهزة.</div>
+      <div class="glass p-6">3. راحة أثناء الوضوء.</div>
+      <div class="glass p-6">4. خدمة الطوارئ.</div>
+      <div class="glass p-6 md:col-span-2">5. دمج الصحة والعبادة.</div>
+    </div>
+  </section>
+
+  <!-- الحل -->
+  <section class="glass max-w-5xl mx-auto mt-16 p-8 text-center" data-aos="fade-up">
+    <h2>🔑 الحل</h2>
+    <p class="text-lg leading-relaxed">
+      سوار ذكي مقاوم للماء يحتوي على شريحة NFC وباركود لفتح الموقع الطبي بسهولة. يوفر تذكير بالأدوية، إمكانية الوصول للطوارئ بسرعة، وموقع طبي شخصي يحوي جميع المعلومات.
+    </p>
+  </section>
+
+  <!-- طريقة الصناعة -->
+  <section class="max-w-5xl mx-auto text-center mt-16 px-4" data-aos="fade-up">
+    <h2>⚙️ طريقة صناعة الساعة</h2>
+    <p class="text-lg leading-relaxed">
+      الساعة مصممة من هيكل معدني خفيف مقاوم للصدأ مع سوار شبكي مفتوح يسمح بمرور الماء أثناء الوضوء. الشاشة ضد الماء والبطارية تدوم لأيام. داخل الساعة شريحة NFC ومستشعرات طبية لقياس النبض والخطوات.
+    </p>
+    <div class="mt-6">
+      <h3 class="text-xl font-semibold mb-2">الموقع الطبي</h3>
+      <a href="https://mshary7.github.io/Tleed/" target="_blank" class="px-6 py-3 bg-purple-600 rounded-lg hover:bg-purple-800 transition">زيارة الموقع الطبي</a>
+      <div class="mt-6 flex flex-col items-center">
+        <div id="qrcode"></div>
+        <p class="mt-2">📱 امسح الباركود للوصول للموقع الطبي</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- الفريق -->
+  <section class="glass max-w-4xl mx-auto mt-16 p-8 text-center" data-aos="fade-up">
+    <h2>👨‍💻 فريق العمل</h2>
+    <p class="text-lg">مشاري ناجي – صاحب الفكرة والمصمم والمبرمج</p>
+    <p class="text-lg">فراس عبدالسلام – صاحب الأفكار</p>
+    <p class="text-lg">مازن – المصمم</p>
+  </section>
+
+  <!-- النهاية -->
+  <footer class="text-center py-8 mt-16 border-t border-purple-700">
+    <p class="text-lg">شكراً لرؤيتك لفكرتنا 🙏</p>
+    <p class="mt-2 text-sm opacity-70">© جميع الحقوق محفوظة لمشاري ناجي ورفاقه</p>
+  </footer>
+
+  <!-- سكربت 3D -->
+  <script>
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(45, document.getElementById("watch3d").clientWidth / document.getElementById("watch3d").clientHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    renderer.setSize(document.getElementById("watch3d").clientWidth, document.getElementById("watch3d").clientHeight);
+    document.getElementById("watch3d").appendChild(renderer.domElement);
+
+    const light = new THREE.DirectionalLight(0xffffff, 1);
+    light.position.set(1, 1, 2).normalize();
+    scene.add(light);
+
+    const loader = new THREE.OBJLoader();
+    loader.load('assets/watch.obj', function(obj) {
+      obj.scale.set(2,2,2);
+      scene.add(obj);
+    }, undefined, function(error) {
+      // Placeholder model
+      const geometry = new THREE.TorusKnotGeometry(1, 0.3, 100, 16);
+      const material = new THREE.MeshStandardMaterial({ color: 0x8e44ad });
+      const torusKnot = new THREE.Mesh(geometry, material);
+      scene.add(torusKnot);
+    });
+
+    camera.position.z = 5;
+    function animate() {
+      requestAnimationFrame(animate);
+      scene.rotation.y += 0.005;
+      renderer.render(scene, camera);
+    }
+    animate();
+
+    // QR Code
+    new QRCode(document.getElementById("qrcode"), {
+      text: "https://mshary7.github.io/-QR-/",
+      width: 128,
+      height: 128
+    });
+  </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
+</body>
+</html>
